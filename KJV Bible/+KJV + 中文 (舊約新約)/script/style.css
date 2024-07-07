@@ -1,0 +1,379 @@
+html, body{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	overflow: hidden;
+	height: 100%; 
+	max-height: 100%;
+}
+* {margin:0px; padding:0px;}
+a:link, a:visited { 
+	color: #8b0000; 
+	text-decoration:none; 
+}
+a:hover { 
+	color: #8b0000; 
+	text-decoration:underline; 
+}
+#framecontent{	
+	top: 0px;
+	bottom: 0px; 
+	left: 0px;
+	width: 207px; /*Width of frame div*/
+	height: 100%;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	position: absolute;
+	float:left;
+}
+#wrapper{	
+	top: 0px; 
+	left: 207px; /*Set left value to WidthOfFrameDiv*/
+	right: 0px;
+	bottom: 0px;
+	height: 100%;
+	float:right;
+	overflow: hidden; 	
+	position: absolute;
+	background: none;
+	max-width: 1393px;
+}
+#scrollbody{
+	height: 100%;
+	width: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+#scrollcontent{
+	width: 100%;
+	overflow: hidden;
+	background-image: url(../image/bg-main.jpg);
+	background-attachment: scroll;
+	background-repeat: repeat-y;
+	background-position: top left;
+}
+* #scrollcontent{width: auto}
+#pagenav {
+	clear:both;
+	width:100%;
+	border-bottom:1px solid #000;
+}
+#pagenav ul {
+	clear:left;
+	float:left;
+	width:100%;
+	list-style:none;
+	margin:0px 0px 0px 0px;
+	padding:0px;
+}
+#pagenav ul li {
+	display:inline;
+	list-style:none;
+	margin:0px;
+	padding:0px;	
+}
+#pagenav ul li.dim {
+	display:block;
+	float:left;
+	margin-left: 1px;
+	margin-bottom: 1px;	
+	text-align:center;
+	background:#eee;
+	color:#ccc;
+	text-decoration:none;
+	left:0px;	
+	font: normal 12px Verdana;	
+	width:28px;	
+	padding: 5px 0px 5px 0px;
+}
+#pagenav ul li a {
+	display:block;
+	float:left;
+	margin-left: 1px;
+	margin-bottom: 1px;	
+	text-align:center;
+	background:#eee;
+	color:#000;
+	text-decoration:none;
+	left:0px;	
+	font: normal 12px Verdana;	
+	width:28px;	
+	padding: 5px 0px 5px 0px;
+}
+#pagenav ul li a:hover {
+	background:#bebc9f;
+	color:#fff;
+}
+#pagenav ul li a.active,
+#pagenav ul li a.active:hover {
+	color:#fff;
+	background:#000;
+	font-weight:bold;
+}
+#pagenav ul li a.currentpage {
+	color:#fff;
+	background:#bebc9f;
+}
+.urbangreymenu{
+	width: 190px; /*width of menu*/
+}
+.urbangreymenu .headerbar{
+	font: normal 12px Verdana;
+	color: white;
+	background: #3b5972;
+	margin-top: 12px;
+	margin-bottom: 0px; /*bottom spacing between header and rest of content*/
+	text-transform: uppercase; /*8px is left indentation of header text*/
+	padding-top: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 5px;
+	cursor: pointer;
+}
+.urbangreymenu .headerbar a{
+	text-decoration: none;
+	color: white;
+	display: block;
+}
+.urbangreymenu ul{
+	list-style-type: none;
+	color: white;
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 0px; /*bottom spacing between each UL and rest of content*/
+}
+.urbangreymenu ul li{
+	color: white;
+	padding-bottom: 1px; /*bottom spacing between menu items*/	
+}
+.urbangreymenu ul li.normal{
+	background: #dbd7cc;
+	font: normal 12px Verdana;
+	color: #000;
+	display: block;
+	padding: 3px 7px;
+}
+.urbangreymenu ul li.search{
+	background: #dbd7cc;
+	display: block;	
+	padding: 3px 3px;
+}
+.urbangreymenu ul li.search input.search-text{
+	width: 161px;
+	padding-right: 0px;
+	padding-bottom: 1px;
+	margin-right: 0px;
+	margin-top: 0px;
+	padding-left: 1px;
+	padding-top: 1px; 
+	border: solid 1px #999999;
+	background: #F0F0F0;	
+	vertical-align: middle;
+}
+.urbangreymenu ul li.search input.search-button{
+	vertical-align: middle;
+}
+.urbangreymenu ul li a{
+	font: normal 12px Verdana;
+	color: white;
+	display: block;
+	padding: 4px 0px;
+	padding-left: 7px; /*link text is indented 7px*/
+	text-decoration: none;
+	margin-left: 7px;
+	background:url(../image/bg-page.gif);
+}
+.urbangreymenu ul li a.currentpage {
+	color:#fff;
+	background:#bebc9f;
+	text-decoration: none;
+}
+.urbangreymenu ul li a:hover{ /*hover state CSS*/
+	color: 000000;
+	background: #bebc9f;
+	text-decoration: none;
+}
+blockquote ul, blockquote ol{ 
+	font-size:10pt;
+	font-family: Verdana;
+	margin:0em; 
+	padding:0px; 
+	left:0px;
+	overflow:hidden;
+	margin-left:0em; 
+	list-style:none;
+}
+blockquote li li { 
+	list-style:decimal;
+	font-size: 10pt; 
+	margin-left:2.6em;   
+	font-family:Verdana;
+}
+blockquote.b-block {
+	background-color:#FAF8F1;
+	padding:0.5em;
+	margin:0.5em;
+	border-left:6px solid #C8BA92;
+	margin:1em 1em 1em 3em;
+}
+#selectfontsize {
+	margin:0px;
+	position: absolute;
+	float:top;
+	right:20px;
+}
+#selectfontsize ul{
+	list-style:none;
+}
+#selectfontsize ul li{
+	display:inline;
+	list-style:none;
+	margin:0px;
+}
+#selectfontsize ul li a{
+	display:block;
+	float:left;
+	margin-left: 1px;
+	padding:2px 2px;
+	background:#F0F0F0;
+	color:#000;
+	text-decoration:none;
+	line-height: 18px;
+}
+#selectfontsize ul li a:hover,
+#selectfontsize ul li a.currentpage {
+	color: white;
+	background: maroon;
+}
+#selectfontsize ul li.fontsize1{
+	font: normal 8pt Verdana;	
+}
+#selectfontsize ul li.fontsize2{
+	font: normal 10pt Verdana;	
+}
+#selectfontsize ul li.fontsize3{
+	font: normal 12pt Verdana;	
+}
+#selectfontsize ul li.fontsize4{
+	font: normal 14pt Verdana;	
+}
+
+/* fontSize1 */
+.fontSize1 .maintable td{ 
+	font: normal 8pt Verdana; 	
+}
+.fontSize1 .maintable p { 
+	font: normal 8pt Verdana; 
+	line-height:120%;
+}
+.fontSize1 .infotable tr td.thdrcell {
+	font: normal 8pt Verdana; 	
+}
+.fontSize1 .infotable tr td.tdatacell {
+	font: normal 8pt Verdana; 	
+}
+
+/* fontSize2 */
+.fontSize2 .maintable td{ 
+	font: normal 10pt Verdana; 
+}
+.fontSize2 .maintable p { 
+	font: normal 10pt Verdana; 
+	line-height:140%;
+}
+.fontSize2 .infotable tr td.thdrcell {
+	font: normal 10pt Verdana; 
+}
+.fontSize2 .infotable tr td.tdatacell {
+	font: normal 10pt Verdana; 
+}
+
+/* fontSize3 */
+.fontSize3 .maintable td{ 
+	font: normal 12pt Verdana; 
+}
+.fontSize3 .maintable p { 
+	font: normal 12pt Verdana; 
+	line-height:160%;
+}
+.fontSize3 .infotable tr td.thdrcell {
+	font: normal 12pt Verdana; 
+}
+.fontSize3 .infotable tr td.tdatacell {
+	font: normal 12pt Verdana; 
+}
+
+/* fontSize4 */
+.fontSize4 .maintable td{ 
+	font: normal 14pt Verdana; 	
+}
+.fontSize4 .maintable p { 
+	font: normal 14pt Verdana; 
+	line-height:180%;
+}
+.fontSize4 .infotable tr td.thdrcell {
+	font: normal 14pt Verdana; 	
+}
+.fontSize4 .infotable tr td.tdatacell {
+	font: normal 14pt Verdana; 	
+}
+
+.maintable { 	
+	padding: 0px; 
+	margin: 15px; 
+	margin-right: 15px;
+	border-collapse: collapse;
+}
+
+.maintable tr td { 
+	padding: 5px;  
+	vertical-align: top; 
+}
+.maintable tr td.vid { 
+	color: #606060;
+	text-align: right;
+}
+.maintable tr.title td {
+	font: bold 18px Verdana; 
+	color: #8B0000;
+	height: 40px;	
+	padding-top:10px; 
+	letter-spacing:5px;
+}
+.maintable tr td span.highlight {
+	background-color: #FFF8DC;
+}
+.maintable tr td.vid { 
+	font: normal 8pt Verdana; 
+}
+.infotable {
+	padding: 0px; 
+	margin-top: 20px; 
+	top: 20px;
+	margin-left: 20px; 
+	border:1px solid #C8BA92;
+}
+.infotable tr td.thdrcell {
+	background:#F3F0E7;
+	padding:1px;
+}
+.infotable tr td.tdatacell {
+	background:#FFFFFF;
+	padding:1px;	
+}
+.remark {
+	border-top:1px solid #C0C0C0;
+	font: normal 12px Verdana;
+	color: #606060;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.altdouble { /* alternate double */
+	border-bottom: 3px double;
+	line-height: 1.7em;
+	border-color: #A52A2A;
+}
+
+label {
+	cursor: pointer;
+}
