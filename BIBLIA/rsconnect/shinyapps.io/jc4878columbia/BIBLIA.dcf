@@ -1,0 +1,11 @@
+name: BIBLIA
+title: BIBLIA
+username:
+account: jc4878columbia
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8721673
+bundleId: 9128273
+url: https://jc4878columbia.shinyapps.io/BIBLIA/
+asMultiple: FALSE
+asStatic: FALSE
