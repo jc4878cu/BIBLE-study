@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="script/style.css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>中文英王欽定本 Chinese King James Version - http://ckjv.asia</title>
+<script type="text/javascript" src="script/b2.js" charset="utf-8"></script>
+<script type="text/javascript" src="script/ckjv.js" charset="utf-8"></script>
+<!--script type="text/javascript" src="./script/kjv.js" charset="utf-8"></script-->
+<script type="text/javascript" src="script/code.js" charset="utf-8"></script>
+</head>
+
+<body onLoad="loadscope();">
+<form name="frmSearch" onSubmit="formValidate(this.txtSearch.value); return false;" action="../tc/post">
+<div id="framecontent">
+	<div class="urbangreymenu">
+		<div style="float:left;position: absolute;top:0px;left:0px;"><a href="http://ckjv.asia"><img  src="image/spacer.gif" width="190" height="165" border="0"></div></a>
+		<h3 class='headerbar' style="background-image:url('image/logo.jpg');padding-top:171px;padding-bottom:0;margin-top:0px">
+			<table border=0 cellpadding=0 cellspacing=0 onClick='showHideElement("divSubAS");return false;'style="cursor:pointer;padding-bottom:3px"><tr>
+				<td width=180>進階搜尋 Advance Search</td>
+				<td width=10 align=right><img src="image/expand.gif" id="divSubAS_arrow" border=0></td>
+			</table>
+		</h3>
+		<div id='divSubAS' style="display:none"> 
+		<ul><li class="normal">
+			<u>搜尋方法</u><br />
+			<input type="checkbox" name="chkExact" value="Yes" checked />英文整詞 Exact Phrase<br />
+			<input type="radio" name="method" value="and" checked/>與 AND　
+			<input type="radio" name="method" value="or"/>或 OR</li>
+			<li class="normal">
+			<u>搜尋範圍</u><br />
+			<input type="radio" checked name="scope" value="all"/>全本聖經　 
+			<input type="radio" name="scope" value="oldtest"/>舊約全書<br />
+			<input type="radio" name="scope" value="custom"/>自訂範圍　
+			<input type="radio" name="scope" value="newtest"/>新約全書<br />
+			<select name="scopeList" size="7" style="width:170px;" id="scopeList"
+			onFocus="this.currentSelected=this.selectedIndex;document.frmSearch.scope[2].checked=true;" 
+			onChange="restore(this);" multiple></select><br />
+		  註：按 Ctrl 鍵可選多個書卷		</li></ul>
+		</div>		
+
+		<div id="divSubSh">
+		<ul>
+			<li class="search">
+				<input name="txtSearch" type="text" id="txtSearch" class="search-text" value="關鍵字" onFocus="this.value==this.defaultValue?this.value='':null"/><input id="btnSearch" class="search-button" name="btnSearch" type="image" src="image/icon_search.gif"/>
+			</li>
+		</ul>
+		</div><h3 class='headerbar' onClick='showHideElement("divSubDS");return false;'>
+			<table border=0 cellpadding=0 cellspacing=0><tr>
+				<td width=180>顯示設定 Display Settings</td>
+				<td width=10 align=right><img src="image/collapse.gif" id="divSubDS_arrow"></td>
+			</table>
+		</h3>
+		<div id='divSubDS'>
+		<ul>
+			<li class="normal"><label><input id="chkCKJV" type="checkbox" name="chkCKJV" checked /> 
+			中文英王欽定本</label><br/>
+			<label><input type="checkbox" name="chkKJV" onClick="onClickKJV();"/> 
+			King James Version</label><br />
+			<label><input type="checkbox" name="compare" value="Yes">
+			顯示和合本被刪改對照經文</label><img src="image/spacer.gif" height=20 width=0></span></li>
+		</ul>
+		</div>
+		<div id="leftnav"></div>
+	</div>
+	</div>
+  <div id="wrapper"></div>
+  </div>
+</form>
+</body>
+</html>
+<script type="text/javascript">
+<!--	
+if ((ver > -1)&&(ver <= 7.0)) {
+	/**
+	* create an (empty) iframe if IE is detected
+	* the strange src should resolve the 'mixed 
+	* content' annoyance using https
+	*/
+	var fr = document.createElement('iframe');
+	document.body.appendChild(fr);
+	fr.style.display = 'none';
+	fr.src = 'javascript:"<html></html>"';
+	var frm = fr.contentWindow;
+	frContentTemplate = '<html><head><script>top.location.hash = '+
+	                   '\'_hashvalue_\';</scr'+'ipt></head><body>'+
+	                   '_hashvalue_</body></html>';
+}
+changeContent(writeLeftNav(777), "leftnav");
+//changeContent(writeMainPage(), "wrapper");
+readBible(0,0,1);
+var gotoString = getQueryString("goto");
+var searchString = getQueryString("search");
+if (gotoString) {
+	gotoBible(gotoString);
+} else if (searchString) {
+	document.frmSearch.txtSearch.value = searchString;
+	formValidate(searchString);
+}
+//this is to poll URL change
+document.onkeydown=pressArrowKeys;
+checkHash();
+//-->	
+</script>
